@@ -77,3 +77,11 @@ nav {
     color: #444;
     font-weight: 600;
 }
+
+button {
+    background-color: white;
+    color: #0db1a4;
+    align-items: center;
+    border-radius: 5000px;
+    padding: 5px 5px;
+}
