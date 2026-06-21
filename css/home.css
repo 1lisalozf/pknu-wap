@@ -5,11 +5,23 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "neurimboGothic";
+    src: url(../assets/fonts/neurimboGothicRegular.otf) format('opentype');
+}
+
 body {
-    font-family: "Pretendard", sans-serif;
+    font-family: "neurimboGothic";
 }
 
 /* Hero 영역 */
+.hero-content{
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .hero {
     position: relative;
     width: 100%;
@@ -38,11 +50,38 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+.menu a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #0db1a4;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #0db1a4;
+
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
 
 .logo {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     color: #0db1a4;
+    cursor: pointer;
 }
 
 .menu {
@@ -55,7 +94,7 @@ nav {
     text-decoration: none;
     color: #0db1a4;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* 중앙 내용 */
@@ -64,24 +103,118 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 60px;
-    font-weight: 700;
+    font-size: 75px;
+    font-weight: 400;
     color: #0db1a4;
 
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
+    font-family: "pretendard";
     font-size: 15px;
-    line-height: 1.8;
-    color: #444;
-    font-weight: 600;
+    line-height: 1.7;
+    color: #444444;
+    font-weight: 500;
 }
 
-button {
-    background-color: white;
+/* 페이지 버튼 */
+.button{
+    margin-top: 50px;
+    margin-right: 12px;
+
+    width: 130px;
+    height: 50px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255,0.1);
+    border-radius: 50px;
+    border-color: #ffffff;
+    border: 1.5px solid #ffffff;
+
+    font-weight: 500;
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.557);
     color: #0db1a4;
-    align-items: center;
-    border-radius: 5000px;
-    padding: 5px 5px;
+    border: none;
+    transform: scale(1.05);
+}
+
+/* detail 부분 */
+.hero-detail{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero-detail-img{
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-detail-content h1{
+    margin-top: 50px;
+    font-size: 75px;
+    font-weight: 400;
+    color: #0db1a4;
+
+    margin-bottom: 20px;
+}
+
+.hero-detail-content p{
+    font-family: "pretendard";
+    font-size: 15px;
+    line-height: 1.7;
+    color: #181818;
+    font-weight: 500;
+}
+
+.hero-detail-box{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    flex-wrap: wrap;
+}
+
+.box{
+    margin-top: 80px;
+    width: 320px;
+    height: 180px;
+
+    background-color: #d8ecea;
+
+    border-radius: 20px;
+
+    padding: 40px 32px;
+
+    text-align: left;
+
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    background-color: #ffffff;
+}
+
+.box h3 {
+    font-size: 24px;
+    color: #0db1a4;
+
+    margin-bottom: 16px;
+}
+
+.box p {
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #555;
 }
