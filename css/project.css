@@ -141,6 +141,7 @@ nav {
 
     border:1px solid #666;
     border-radius:30px;
+    
 
     font-size:12px;
     color:#444;
@@ -175,34 +176,4 @@ nav {
     position: relative;
 }
 
-.bookmark-btn {
-    position: absolute;
-
-    top: 12px;
-    right: 12px;
-
-    width: 40px;
-    height: 40px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.9);
-
-    cursor: pointer;
-
-    font-size: 20px;
-
-    transition: all 0.3s ease;
-
-    z-index: 100;
-}
-
-.bookmark-btn:hover {
-    transform: scale(1.1);
-}
-
-.bookmark-btn.active {
-    background: #0db1a4;
-    color: white;
-}
+/*북마크 버튼*/
