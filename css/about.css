@@ -1,0 +1,164 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "neurimboGothic";
+    src: url(../assets/fonts/neurimboGothicRegular.otf) format('opentype');
+}
+
+body {
+    font-family: "neurimboGothic";
+}
+
+
+.container {
+    position: relative;
+    width: 95%; margin: 110px auto;
+    height: 600px;
+    background-color: #d1d1d1; /* 기본 회색 배경 */
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 40px;
+}
+
+/* 슬라이드 이미지 설정 */
+.slider-wrapper {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute; width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    opacity: 0; transition: opacity 1s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+
+/* 슬라이드 컨테이너 내부에 검은색 필터 레이어 추가 */
+.slide {
+    position: absolute; width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    opacity: 0; transition: opacity 1s ease-in-out;
+}
+
+/* 50% 투명도 검은색 필터: 이미지 위를 덮음 */
+.slide::after {
+    content: "";
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 검은색 50% 투명도 */
+}
+
+.slide.active { opacity: 1; }
+
+/* 텍스트 컨텐츠는 필터 위에 보여야 하므로 z-index 높게 설정 */
+.content { 
+    position: relative; 
+    z-index: 2; 
+    color: white; /* 어두운 배경이므로 글자색을 흰색으로 변경 추천 */
+}
+
+/* ul 태그의 기본 리스트 스타일을 제거합니다 */
+ul {
+    list-style: none; /* 점 제거 */
+    padding: 0;       /* 기본 들여쓰기 제거 */
+    margin: 0;
+
+    letter-spacing: -0.5px;
+}
+
+/* 필요하다면 리스트 아이템 간격 조절 */
+li {
+    margin-bottom: 6px;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    height: 100%; /* 부모 컨테이너(슬라이드) 높이에 맞춤 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 위아래로 요소 배치 */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content h1 {
+    align-self: flex-end; /* 오른쪽 정렬 */
+    margin: 0;
+}
+/*헤더*/
+nav {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #0db1a4;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #0db1a4;
+
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0db1a4;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0db1a4;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.content h3{
+    padding-bottom: 15px;
+    font-family: "Pretendard";
+}
+.content ul{
+    padding-bottom: 10px;
+    font-family: "Pretendard";
+}
