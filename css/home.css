@@ -75,6 +75,15 @@ nav {
     transition: color 0.3s ease;
 }
 
+
+.logo {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0db1a4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .menu a::after {
     content: "";
     position: absolute;

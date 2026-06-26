@@ -7,8 +7,7 @@
 </head>
 <body>
     <nav>
-        <div class="logo">WAP</div>
-
+        <div class="logo"><li><a href="../pknu-wap/home.html">WAP</a></li></div>
         <ul class="menu">
             <li><a href="../pknu-wap/about.html">About</a></li>
             <li><a href="../pknu-wap/project.html">Projects</a></li>
@@ -18,23 +17,150 @@
 
     <main class="container">
         <div class="slider-wrapper">
-            <div class="slide" style="background-image: url('images/about/back1.jpg');"></div>
+            <div class="slide active" style="background-image: url('images/about/back1.jpg');"></div>
             <div class="slide" style="background-image: url('images/about/back2.jpg');"></div>
             <div class="slide" style="background-image: url('images/about/back3.jpg');"></div>
         </div>
 
         <div class="content">
-            <h1>We Are Programmers!</h1>
-            <ul>
+            <h1 class="title">We Are Programmers!</h1>
+            <div class="info-box">
                 <h3>About WAP</h3>
-                <li><strong>창립   </strong> 2000.09.27</li>
-                <li><strong>소속   </strong> 부경대학교 중앙동아리</li>
-                <li><strong>지도교수   </strong> 컴퓨터인공지능공학부 오상호 교수님</li>
-                <li><strong>총원   </strong> 123명</li>
-                <li><strong>업적   </strong> 우수 동아리 은상 수상(2026.02.19 발표)</li>
-            </ul>
+                <ul class="info-list">
+                    <li><strong>창립</strong> 2000.09.27</li>
+                    <li><strong>소속</strong> 부경대학교 중앙동아리</li>
+                    <li><strong>지도교수</strong> 컴퓨터인공지능공학부 오상호 교수님</li>
+                    <li><strong>총원</strong> 123명</li>
+                    <li><strong>업적</strong> 우수 동아리 은상 수상(2026.02.19 발표)</li>
+                </ul>
+            </div>
         </div>
-    </main>
+
+        <div class="indicators">
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        </main>
+
+
+        <section class="wap-intro">
+            <h2>Introduce About WAP</h2>
+            <p class="intro-text">WAP의 주요 행사들을 소개합니다</p>
+
+            <div class="grid-container">
+
+                <!-- 카드 1 -->
+                <div class="card">
+                    <img src="images/about/introduce/presentation.jpg" class="image-box">
+
+                    <h3>Presentation</h3>
+
+                    <p>
+                        프로젝트의 기획 단계부터 개발 과정, 최종 결과물까지의
+                        전 과정을 발표하며 팀원들과 경험을 공유하고
+                        피드백을 통해 프로젝트를 발전시킵니다.
+                    </p>
+
+                    <div class="button-group">
+                        <button>시작 발표</button>
+                        <button>중간 발표</button>
+                        <button>최종 발표</button>
+                    </div>
+                </div>
+
+                <!-- 카드 2 -->
+                <div class="card">
+                    <img src="images/about/introduce/seminar3.jpg" class="image-box">
+
+                    <h3>Seminar</h3>
+
+                    <p>
+                        프로젝트 기획부터 개발 과정까지의 실무 경험과 노하우를 공유하는 세미나입니다.
+                        동아리원들끼리 개발의 기초를 다질 수 있는 기회를 제공합니다.
+                    </p>
+
+                    <div class="button-group">
+                        <button>프로젝트 세미나</button>
+                        <button>깃 세미나</button>
+                        <button>배포 세미나</button>
+                    </div>
+                </div>
+
+                <!-- 카드 3 -->
+                <div class="card">
+                    <img src="images/about/introduce/boosting.jpg" class="image-box">
+
+                    <h3>Boosting Day</h3>
+
+                    <p>
+                        부스팅데이는 프로젝트를 한 단계 더 발전시키기 위해 
+                        팀원들이 하루 동안 함께 모여 개발에 몰입하고, 
+                        멘토의 실시간 피드백을 통해 기획과 기술 방향을 
+                        점검하는 집중 개발 행사입니다.
+                    </p>
+
+                    <div class="button-group">
+                        <button>부스팅데이</button>
+                    </div>
+                </div>
+
+                <!-- 카드 4 -->
+                <div class="card">
+                    <img src="images/about/introduce/homecoming.jpg" class="image-box">
+
+                    <h3>Homecomming Day</h3>
+
+                    <p>
+                        홈커밍 데이는 선배님들로부터 업계 이야기와 진로에 대한 
+                        실질적인 정보를 얻을 수 있는 자리로, 
+                        WAP에서 경험할 수 있는 의미 있는 행사 중 하나 입니다.
+                    </p>
+
+                    <div class="button-group">
+                        <button>홈커밍데이</button>
+                    </div>
+                </div>
+
+                <!-- 카드 5 -->
+                <div class="card">
+                    <img src="images/about/introduce/mt.jpg" class="image-box">
+
+                    <h3>Friendship</h3>
+
+                    <p>
+                        개(발)모임은 소규모로 진행되는 테크톡 형식의 모임으로, 
+                        발표자가 자유롭게 원하는 주제를 준비해 서로의 지식을 
+                        나누는 자리입니다.
+                    </p>
+
+                    <div class="button-group">
+                        <button>MT</button>
+                        <button>핑캠/옐캠 행사</button>
+                        <button>시험 응원전</button>
+                    </div>
+                </div>
+
+                <!-- 카드 6 -->
+                <div class="card">
+                    <img src="images/about/introduce/final.jpg" class="image-box">
+
+                    <h3>Final Exibition</h3>
+
+                    <p>
+                       최종전시회는 한 학기 동안 WAP 동아리원들이 직접 기획하고 개발한 프로젝트를 한자리에서 만나볼 수 있는 행사입니다.
+
+                    </p>
+
+                    <div class="button-group">
+                        <button>최종 전시회</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
     <script src="js/about.js"></script>
 </body>
