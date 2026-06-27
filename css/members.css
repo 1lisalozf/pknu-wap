@@ -192,27 +192,27 @@ body {
 /* 버튼 */
 .members-btn-wrap {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 70px;
+    /* justify-content: center; */
+    margin: 70px 0;
+    justify-content:  flex-end;
 }
 
 .members-btn {
     text-decoration: none;
 
-    border: 2px solid #444;
-    border-radius: 999px;
-
-    padding: 18px 40px;
-
     font-size: 20px;
-    color: #444;
+    font-weight: 700;
+    color: #b7b7b7;
 
-    transition: 0.3s;
+    border-bottom: 2.5px solid #b7b7b7;
+    padding-bottom: 8px;
+
+    line-height: 0.8;
 }
 
-.members-btn:hover {
-    background: #00000016;
-    color: #444;
+.members-btn-wrap {
+    width: 100%;
+    text-align: right;
 }
 
 .member-card {

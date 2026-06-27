@@ -53,3 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(showNextSlide, 6000);
 });
+
+
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+            const elements = document.querySelectorAll(".card");
+
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add("show");
+                }, index * 150);
+            });
+
+        }
+    });
+}, { threshold: 0.1 });
+
+cards.forEach(card => observer.observe(card));
