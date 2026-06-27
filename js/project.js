@@ -3,7 +3,6 @@ const cards = document.querySelectorAll(".project-card");
 cards.forEach((card, index) => {
     const button = card.querySelector(".bookmark-btn");
 
-    // 저장된 상태 불러오기
     const saved = localStorage.getItem(`bookmark-${index}`);
 
     if (saved === "true") {
